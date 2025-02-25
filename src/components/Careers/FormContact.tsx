@@ -10,7 +10,7 @@ const FormContact = () => {
     cccd: '',
     phone: '',
     note: '',
-    dateCreated: '',
+    dateCreated: new Date().toISOString(),
   });
 
   const [message, setMessage] = useState('');
