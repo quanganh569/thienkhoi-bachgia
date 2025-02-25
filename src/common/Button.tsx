@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-scroll";
+import React from 'react';
 
 type ButtonProps = {
-  type?: "button" | "submit" | "reset" | undefined;
+  type?: 'button' | 'submit' | 'reset' | undefined;
   className?: string;
   disabled?: boolean;
   padding?: string;
@@ -13,17 +12,17 @@ type ButtonProps = {
 };
 
 const Button = ({
-  type = "button",
-  className = "",
+  type = 'button',
+  className = '',
   disabled = false,
-  padding = "py-2 px-4",
+  padding = 'py-2 px-4',
   onClick,
   href,
   scrollTo,
   children,
 }: ButtonProps) => {
   const baseClassName =
-    "transition duration-500 rounded bg-red-600 text-center text-white focus:ring-0 focus:outline-none";
+    'transition duration-500 rounded bg-red-600 text-center text-white focus:ring-0 focus:outline-none';
   return (
     <>
       {href ? (
@@ -37,31 +36,16 @@ const Button = ({
         </a>
       ) : (
         <>
-          {scrollTo ? (
-            <Link to={scrollTo} spy={true} smooth={true} offset={-40}>
-              <button
-                type={type}
-                className={`${baseClassName} ${className} ${padding}`}
-                disabled={disabled}
-                onClick={() => {
-                  if (onClick) onClick();
-                }}
-              >
-                <span>{children}</span>
-              </button>
-            </Link>
-          ) : (
-            <button
-              type={type}
-              className={`${baseClassName} ${className} ${padding}`}
-              disabled={disabled}
-              onClick={() => {
-                if (onClick) onClick();
-              }}
-            >
-              <span>{children}</span>
-            </button>
-          )}
+          <button
+            type={type}
+            className={`${baseClassName} ${className} ${padding}`}
+            disabled={disabled}
+            onClick={() => {
+              if (onClick) onClick();
+            }}
+          >
+            <span>{children}</span>
+          </button>
         </>
       )}
     </>
