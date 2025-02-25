@@ -1,0 +1,49 @@
+name: Workflow for CI/CD
+
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event.head_commit.author.name != 'actions'
+    runs-on:
+      group: 5labs
+      labels: [ ncscvn ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create .env file
+        env:
+          ENV_FILE: ${{ secrets.ENV }}
+        run: |
+          rm -rf .env
+          echo "$ENV_FILE" > .env
+          echo "GIT_HASH=${GITHUB_SHA::7}" >> .env
+
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile --network-concurrency 1 --prefer-offline
+
+      - name: Set ENV var
+        run: |
+          echo "NODE_ENV=production" >> $GITHUB_ENV
+
+      - name: Build nextjs
+        run: |
+          pnpm build
+
+      - name: Deploy to nginx
+        run: |
+          pwd
+          ## cp -Rf ./out/* /home/root/nginx/ncscvn
+          rsync -a --delete ./out/ /home/root/nginx/ncscvn

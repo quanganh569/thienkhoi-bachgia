@@ -1,0 +1,238 @@
+/***
+
+====================================================================
+    Channels Section
+====================================================================
+
+***/
+
+.channels-section{
+    position: relative;
+    .bg-image{
+        &:before{
+            @include overlay;
+            background-color: #f5f5f6;
+            opacity: .9;
+            content: "";
+        }
+    }
+    
+    .content-column{
+        position: relative;
+        &:before{
+            position: absolute;
+            right: 12px;
+            top: 0;
+            height: 100%;
+            width: 1000%;
+            background-color: var(--bg-theme-color1);
+            content: "";
+            @include media-breakpoint-down(lg){
+                right: -15px;
+                left: -15px;
+                width: auto;
+            }
+        }
+        .inner-column{
+            position: relative;
+            padding: 75px 0 100px;
+            padding-right: 70px;
+            max-width: 570px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: -375px;
+                height: 100%;
+                background-image: url(../images/icons/dotted-map-2.png);
+                background-position: left top;
+                background-repeat: no-repeat;
+                content: "";
+            }
+            &:after{
+                position: absolute;
+                right: -20px;
+                top: 50%;
+                margin-top: -20px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid var(--theme-color1);
+                z-index: 2;
+                content: "";
+            }
+        }
+        .sec-title{
+            position: relative;
+            margin-bottom: 40px;
+            z-index: 9;
+            @include media-breakpoint-down(xl){
+                br{display: none;}
+            }
+        }
+    }
+    .channels-column{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .inner-column{
+            padding: 100px 100px;
+            padding-right: 0;
+            @include media-breakpoint-down(xl){
+                padding: 100px 50px;
+            }
+        }
+    }
+}
+
+.channel-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        @include flex-center;
+        background-color: #ffffff;
+        min-height: 110px;
+        transition: all 300ms ease;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
+        }
+    }
+    .image{
+        margin-bottom: 0;
+    }
+}
+
+/***
+
+====================================================================
+    Channels Section Two
+====================================================================
+
+***/
+
+.channels-section-two{
+    position: relative;
+    padding: 120px 0;
+    .bg-image{
+        max-width: 640px;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+    
+    .content-column{
+        position: relative;
+        .inner-column{
+            position: relative;
+            padding: 70px 100px 90px;
+            padding-right: 70px;
+            max-width: 570px;
+            background-color: #550ef8;
+            height: 100%;
+            @include media-breakpoint-down(lg){
+                padding: 70px 20px 70px;
+                max-width: 100%;
+                text-align: center;
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                height: 100%;
+                background-image: url(../images/icons/dotted-map-5.png);
+                background-position: left top;
+                background-repeat: no-repeat;
+                content: "";
+            }
+        }
+    }
+
+    .title-box{
+        position: relative;
+        @include media-breakpoint-down(lg){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .days{
+            font-weight: 700;
+            color: var(--theme-color-light);
+            margin-bottom: 10px;
+        }
+        .text{
+            font-size: 30px;
+            line-height: 36px;
+            color: var(--theme-color-light);
+            @include title-font;
+            margin-bottom: 35px;
+        }
+        .info{
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--theme-color-light);
+            @include title-font;
+            margin-bottom: 20px;
+            .icon{
+                font-size: 32px;
+                margin-right: 10px;
+                font-weight: 300;
+            }
+            sub{
+                top: 5px;
+                font-weight: 400;
+                font-size: 14px;
+                margin-left: 2px;
+            }
+        }
+        .theme-btn{
+            min-width: 180px;
+        }
+    }
+
+    .channels-column{
+        .inner-column{
+            padding: 110px 100px 70px;
+            padding-left: 30px;
+            margin-left: -24px;
+            background-color: var(--theme-color-light);
+            height: 100%;
+            @include media-breakpoint-down(lg){
+                margin-left: 0;
+                padding: 70px 30px 40px;
+            }
+        }
+    }
+}
+
+
+.channel-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        @include flex-center;
+        background-color: #ebebeb;
+        min-height: 110px;
+        transition: all 300ms ease;
+        border-radius: 5px;
+    }
+    .image{
+        margin-bottom: 0;
+        overflow: hidden;
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+        img{
+            transition: all 300ms ease;
+        }
+    }
+}

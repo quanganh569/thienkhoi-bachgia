@@ -1,0 +1,513 @@
+/***
+
+====================================================================
+    Movies Section
+====================================================================
+
+***/
+
+.movies-section {
+    position: relative;
+    padding: 120px 0 120px;
+    z-index: 3;
+    &.pull-up{
+        .bg-image{
+            top: -260px;
+            bottom: 0;
+            height: auto;
+        }
+    }
+    .bg-image{
+        &:before{
+            @include overlay;
+            background:linear-gradient(to left, transparent, var(--theme-color3), var(--theme-color3),);
+            content: "";
+        }
+    }
+    .outer-box{
+        margin: 0 -300px;
+        @include media-breakpoint-down(xl){
+            margin: 0;
+        }
+    }
+    .mavies-carousel{
+        padding-bottom: 20px;
+    }
+    
+    .cta-box{
+        margin-top: 90px;
+        @include media-breakpoint-down(xxl){
+            padding-left: 30px;
+        }
+    }
+
+    .anim-icons{
+        .bg-shape{
+            position: absolute;
+            left: 30px;
+            right: 38px;
+            height: 100%;
+            background-color: var(--theme-color4);
+            background-image: url(../images/icons/shape4.jpg);
+        }
+    }
+}
+
+
+.movie-block {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .image-box{
+                .image{
+                    &::before{
+                        opacity: .7;
+                        visibility: visible;
+                    }
+                }
+            }
+            .content-box{
+                .play-btn{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 300ms ease;
+        .image {
+            position: relative;
+            margin-bottom: 0px;
+            &:before{
+                @include overlay;
+                z-index: 1;
+                opacity: 0;
+                visibility: hidden;
+                background-color: var(--bg-theme-color1);
+                transition: all 300ms ease;
+                content: "";
+            }
+            &::after{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 60%;
+                width: 100%;
+                background: linear-gradient(transparent, var(--theme-color-dark));
+                content: "";
+            }
+            a {
+                display: block;
+                width: 100%;
+            }
+            img{
+                transition: all 300ms ease;
+                width: 100%;
+                height: 100%;
+                min-height: 330px;
+                object-fit: cover;
+            }
+        }
+    }
+    .content-box{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 25px 25px 35px;
+        width: 100%;
+        z-index: 3;
+        border-radius: 10px;
+        transition: all 300ms ease;
+        overflow: hidden;
+        .play-btn{
+            position: relative;
+            display: block;
+            height: 72px;
+            width: 72px;
+            font-size: 20px;
+            color: var(--theme-color1);
+            background-color: var(--theme-color-light);
+            @include flex-center;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transform: scale(0);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 300ms ease;
+            &:hover{
+                background-color: var(--theme-color2);
+                color: var(--theme-color-light);
+            }
+        }
+        .title{
+            color: var(--theme-color-light);
+            margin-bottom: 7px;
+            a:hover{
+                color: var(--theme-color-light);
+            }
+        }
+
+        .rating-box{
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255,255,255,.10);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 400;
+            color: var(--theme-color-light);
+            .year{
+                margin-right: 5px;
+            }
+            .rating{
+                .icon{
+                    color: #fc8f1b;
+                }
+            }
+        }
+        
+    }
+
+    &.style-two{
+        .image-box{
+            .image:before{
+                background: var(--gradient-1);
+            }
+        }
+        .content-box{
+            .play-btn{
+                color: var(--theme-color4);
+            }
+        }
+    }
+
+    &.style-three{
+        .image-box{
+            .image:before{
+                background: var(--bg-theme-color6);
+            }
+        }
+        .content-box{
+            .play-btn{
+                color: var(--theme-color6);
+                &:hover{
+                    background-color: var(--theme-color-light);
+                    color: var(--theme-color6);
+                }
+            }
+        }
+    }
+}
+
+
+.cta-box{
+    position: relative;
+    background-color: var(--theme-color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 70px;
+    border-radius: 10px;
+    padding-right: 30px;
+    @include media-breakpoint-down(lg){
+        flex-direction: column;
+        align-items: center;
+    }
+    @include media-breakpoint-down(md){
+        padding: 0 30px;
+        text-align: center;
+    }
+    .info-box{
+        position: relative;
+        padding-left: 75px;
+        padding-top: 40px;
+        padding-right: 30px;
+        padding-bottom: 20px;;
+        @include media-breakpoint-down(md){
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+        .icon{
+            position: absolute;
+            left: 0;
+            top: 45px;
+            font-size: 52px;
+            line-height: 1em;
+            color: var(--theme-color2);
+            @include media-breakpoint-down(md){
+                display: none;
+            }
+        }
+        .text{
+            font-size: 18px;
+            color: var(--theme-color-dark);
+            @include title-font;
+            margin-bottom: 5px;
+            @include media-breakpoint-down(sm){
+                font-size: 16px;
+            }
+        }
+        .title{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1em;
+            color: var(--theme-color1);
+        }
+    }
+    .image{
+        margin-bottom: 0;
+    }
+}
+
+/***
+
+====================================================================
+    Movies Section Two
+====================================================================
+
+***/
+
+.movies-section-two{
+    position: relative;
+    padding: 120px 0 120px;
+    z-index: 3;
+    &.pull-up{
+        padding-top: 230px;
+        margin-top: -120px;
+    }
+    .bg-image{
+        &:before{
+            @include overlay;
+            background-color: #f5f5f6;
+            opacity: .9;;
+            content: "";
+        }
+    }
+    .left-img{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: var(--bg-theme-color1);
+        @include for-xxl{
+            max-width: 26%;
+        }
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+        img{
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+    .sec-title{
+        margin-left: 300px;
+        @include media-breakpoint-down(xl){
+            margin-left: 0;
+        }
+    }
+    .outer-box{
+        margin: 0 -300px;
+        @include media-breakpoint-down(xxl){
+            margin: 0;
+        }
+    }
+    .mavies-carousel{
+        padding-bottom: 20px;
+        .owl-nav{display: none;}
+        .owl-dots{
+            .owl-dot{
+                border-color: var(--theme-color1);
+                &.active{background-color: var(--bg-theme-color1);}
+            }
+        }
+    }
+    .bottom-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-left: 70px;
+        margin-top: 90px;
+        border-radius: 10px;
+        padding-right: 30px;
+        .info-box{
+            position: relative;
+            padding-left: 75px;
+            padding-top: 40px;
+            padding-right: 30px;
+            padding-bottom: 20px;;
+            .icon{
+                position: absolute;
+                left: 0;
+                top: 45px;
+                font-size: 52px;
+                line-height: 1em;
+                color: var(--theme-color2);
+            }
+            .text{
+                font-size: 18px;
+                color: var(--theme-color-dark);
+                @include title-font;
+                margin-bottom: 5px;
+            }
+            .title{
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 1em;
+                color: var(--theme-color1);
+            }
+        }
+        .image{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Movies Section Three
+====================================================================
+
+***/
+
+.movies-section-three{
+    position: relative;
+    padding: 80px 0;
+    z-index: 3;
+    .anim-icons{
+        .bg-shape{
+            position: absolute;
+            left: 30px;
+            right: 38px;
+            height: 100%;
+            width: auto;
+            background-color: var(--theme-color4);
+            background-image: url(../images/icons/shape4.jpg);
+            @include media-breakpoint-down(xl){
+                left: 0;
+                right: 0;
+            }
+        }
+        .left-image{
+            top: auto;
+            left: -440px;
+            bottom: 30px;
+        }
+        .right-image {
+            top: auto;
+            right: -610px;
+            bottom: 50px;
+        }
+    }
+    .sec-title{
+        margin-bottom: 40px;
+    }
+    .mavies-carousel-two{
+        padding-bottom: 20px;
+    }
+}
+
+/***
+
+====================================================================
+    Movies Section Four
+====================================================================
+
+***/
+
+.movies-section-four{
+    position: relative;
+    padding: 120px 0;
+    z-index: 3;
+    .sec-title{
+        margin-bottom: 60px;
+    }
+    .mixitup-gallery {
+        position: relative;
+        z-index: 3;
+        .filter-btns {
+            justify-content: flex-end;
+            margin-top: -100px;
+            @include media-breakpoint-down(xl) {
+                margin-top: 0;
+                justify-content: flex-start;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .movie-block{
+        .image-box .image img{
+            min-height: 220px;
+        }
+        &.big-block{
+            .content-box{
+                padding: 60px 44px;
+                @include media-breakpoint-down(md){
+                    padding: 25px 25px 35px;
+                }
+            }
+        }
+    }
+
+    .btn-box{
+        margin-top: 20px;
+    }
+}
+
+.mixitup-gallery{
+    .mix{display: none;}
+    .filter-btns{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+        .filter{
+            position: relative;
+            font-size: 16px;
+            line-height: 15px;
+            padding: 5px 10px;
+            font-weight: 400;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            &:first-child{margin-left: 0;}
+            @include media-breakpoint-down(lg){
+                line-height: 15px;
+                padding: 5px 15px;
+                margin-left: 0;
+                margin-right: 15px;
+            }
+            @include media-breakpoint-down(sm){
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+            &:hover{
+                color: var(--theme-color4);
+            }
+            &.active{
+                background: var(--gradient-1);
+                color: var(--theme-color-light);
+            }
+        }
+    }
+}

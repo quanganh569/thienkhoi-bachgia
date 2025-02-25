@@ -1,0 +1,106 @@
+
+/*** 
+
+====================================================================
+    Video Section
+====================================================================
+
+***/
+
+.video-section{
+    position: relative;
+    .bg-overlay{
+        background-image: url(../images/icons/overlay2.png);
+    }
+    
+    .content-column {
+        position: relative;
+        .inner-column {
+            position: relative;
+            padding: 160px 0 190px;
+            @include media-breakpoint-down(lg){
+                padding: 70px 0 0;
+                text-align: center;
+            }
+        }
+        .sec-title{
+            max-width: 370px;
+            margin-bottom: 35px;
+            @include media-breakpoint-down(lg){
+                max-width: 100%;
+            }
+        }
+    }
+
+    .info-outer{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @include media-breakpoint-down(lg){
+            justify-content: center;
+        }
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .info-box{
+        position: relative;
+        padding-left: 50px;
+        margin-right: 40px;
+        margin-bottom: 30px;
+        text-align: left;
+        &:last-child{margin-right: 0;}
+        @include media-breakpoint-down(sm){
+            margin-right: 0;
+        }
+        .icon{
+            position: absolute;
+            left: 0;
+            top: 0px;
+            font-size: 44px;
+            color: var(--theme-color6);
+            line-height: 1em;
+        }
+        .title{
+            font-size: 18px;
+            line-height: 22px;
+            color: #f5f5f5;
+            @include title-font;
+        }
+    }
+
+    .video-column{
+        position: relative;
+        @include flex-center;
+        .video-box{
+            position: relative;
+            padding: 70px 0 50px;
+            display: inline-block;
+            .play-btn{
+                position: relative;
+                height: 72px;
+                width: 72px;
+                background-color: var(--theme-color-light);
+                @include flex-center;
+                color: var(--theme-color6);
+                border-radius: 50%;
+                left: 80px;
+                top: -60px;
+                i{position: relative;}
+                &:before{
+                    position: absolute;
+                    left: -10px;
+                    top: -10px;
+                    right: -10px;
+                    bottom: -10px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    opacity: .10;
+                    animation: zoomIn 2s infinite linear;
+                    content: "";
+                }
+            }
+        }
+    }
+}

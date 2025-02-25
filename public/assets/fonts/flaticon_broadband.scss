@@ -1,0 +1,425 @@
+$flaticon_broadband-font: "flaticon_broadband";
+
+@font-face {
+    font-family: $flaticon_broadband-font;
+    src: url("./flaticon_broadband.ttf?bc969aa27ab5c1a6b9a73a42fb327221") format("truetype"),
+url("./flaticon_broadband.woff?bc969aa27ab5c1a6b9a73a42fb327221") format("woff"),
+url("./flaticon_broadband.woff2?bc969aa27ab5c1a6b9a73a42fb327221") format("woff2"),
+url("./flaticon_broadband.eot?bc969aa27ab5c1a6b9a73a42fb327221#iefix") format("embedded-opentype"),
+url("./flaticon_broadband.svg?bc969aa27ab5c1a6b9a73a42fb327221#flaticon_broadband") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_broadband !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_broadband-map: (
+    "call": "\f101",
+    "camera": "\f102",
+    "age-limit": "\f103",
+    "water": "\f104",
+    "script": "\f105",
+    "smartphone": "\f106",
+    "ranking": "\f107",
+    "train": "\f108",
+    "film-editing": "\f109",
+    "electric": "\f10a",
+    "ticket": "\f10b",
+    "agriculture": "\f10c",
+    "cinema-seats": "\f10d",
+    "cctv": "\f10e",
+    "actress": "\f10f",
+    "server": "\f110",
+    "action-movie": "\f111",
+    "scanner": "\f112",
+    "award": "\f113",
+    "gear": "\f114",
+    "accreditation": "\f115",
+    "processor": "\f116",
+    "speaker": "\f117",
+    "plane": "\f118",
+    "file": "\f119",
+    "people": "\f11a",
+    "battery": "\f11b",
+    "bell": "\f11c",
+    "book": "\f11d",
+    "monitor": "\f11e",
+    "skycraper": "\f11f",
+    "router": "\f120",
+    "shield": "\f121",
+    "smartwatch": "\f122",
+    "headphone": "\f123",
+    "thermometer": "\f124",
+    "fire": "\f125",
+    "payment": "\f126",
+    "virtual-reality": "\f127",
+    "game": "\f128",
+    "drone": "\f129",
+    "cloud": "\f12a",
+    "padlock": "\f12b",
+    "mouse": "\f12c",
+    "hand": "\f12d",
+    "coin": "\f12e",
+    "hand-1": "\f12f",
+    "key": "\f130",
+    "keyboard": "\f131",
+    "lamp": "\f132",
+    "laptop": "\f133",
+    "magnifying-glass": "\f134",
+    "pin": "\f135",
+    "car": "\f136",
+    "world": "\f137",
+    "smarthome": "\f138",
+    "shopping": "\f139",
+    "robot-arm": "\f13a",
+    "remote": "\f13b",
+    "planet": "\f13c",
+    "chat": "\f13d",
+    "award-1": "\f13e",
+    "microphone": "\f13f",
+    "music-notes": "\f140",
+    "projector": "\f141",
+    "spotlight": "\f142",
+    "spotlight-1": "\f143",
+    "video-camera": "\f144",
+    "actor": "\f145",
+    "microphone-1": "\f146",
+    "film-roll": "\f147",
+    "3d-glasses": "\f148",
+    "director-chair": "\f149",
+    "countdown": "\f14a",
+    "comedy": "\f14b",
+    "camera-drone": "\f14c",
+    "ticket-office": "\f14d",
+    "rec": "\f14e",
+    "microphone-2": "\f14f",
+    "countdown-1": "\f150",
+    "stage": "\f151",
+    "clapperboard": "\f152",
+    "video-player": "\f153",
+    "red-carpet": "\f154",
+    "dress": "\f155",
+    "soft-drink": "\f156",
+    "make-up": "\f157",
+    "film-budget": "\f158",
+    "cinema": "\f159",
+    "copyright": "\f15a",
+    "film-reel": "\f15b",
+    "romantic-movie": "\f15c",
+    "hd-screen": "\f15d",
+    "popcorn": "\f15e",
+    "edit-video": "\f15f",
+    "release": "\f160",
+    "spotlight-2": "\f161",
+    "dialogue": "\f162",
+    "rating": "\f163",
+    "3d-film": "\f164",
+);
+
+.flaticon-call:before {
+    content: map-get($flaticon_broadband-map, "call");
+}
+.flaticon-camera:before {
+    content: map-get($flaticon_broadband-map, "camera");
+}
+.flaticon-age-limit:before {
+    content: map-get($flaticon_broadband-map, "age-limit");
+}
+.flaticon-water:before {
+    content: map-get($flaticon_broadband-map, "water");
+}
+.flaticon-script:before {
+    content: map-get($flaticon_broadband-map, "script");
+}
+.flaticon-smartphone:before {
+    content: map-get($flaticon_broadband-map, "smartphone");
+}
+.flaticon-ranking:before {
+    content: map-get($flaticon_broadband-map, "ranking");
+}
+.flaticon-train:before {
+    content: map-get($flaticon_broadband-map, "train");
+}
+.flaticon-film-editing:before {
+    content: map-get($flaticon_broadband-map, "film-editing");
+}
+.flaticon-electric:before {
+    content: map-get($flaticon_broadband-map, "electric");
+}
+.flaticon-ticket:before {
+    content: map-get($flaticon_broadband-map, "ticket");
+}
+.flaticon-agriculture:before {
+    content: map-get($flaticon_broadband-map, "agriculture");
+}
+.flaticon-cinema-seats:before {
+    content: map-get($flaticon_broadband-map, "cinema-seats");
+}
+.flaticon-cctv:before {
+    content: map-get($flaticon_broadband-map, "cctv");
+}
+.flaticon-actress:before {
+    content: map-get($flaticon_broadband-map, "actress");
+}
+.flaticon-server:before {
+    content: map-get($flaticon_broadband-map, "server");
+}
+.flaticon-action-movie:before {
+    content: map-get($flaticon_broadband-map, "action-movie");
+}
+.flaticon-scanner:before {
+    content: map-get($flaticon_broadband-map, "scanner");
+}
+.flaticon-award:before {
+    content: map-get($flaticon_broadband-map, "award");
+}
+.flaticon-gear:before {
+    content: map-get($flaticon_broadband-map, "gear");
+}
+.flaticon-accreditation:before {
+    content: map-get($flaticon_broadband-map, "accreditation");
+}
+.flaticon-processor:before {
+    content: map-get($flaticon_broadband-map, "processor");
+}
+.flaticon-speaker:before {
+    content: map-get($flaticon_broadband-map, "speaker");
+}
+.flaticon-plane:before {
+    content: map-get($flaticon_broadband-map, "plane");
+}
+.flaticon-file:before {
+    content: map-get($flaticon_broadband-map, "file");
+}
+.flaticon-people:before {
+    content: map-get($flaticon_broadband-map, "people");
+}
+.flaticon-battery:before {
+    content: map-get($flaticon_broadband-map, "battery");
+}
+.flaticon-bell:before {
+    content: map-get($flaticon_broadband-map, "bell");
+}
+.flaticon-book:before {
+    content: map-get($flaticon_broadband-map, "book");
+}
+.flaticon-monitor:before {
+    content: map-get($flaticon_broadband-map, "monitor");
+}
+.flaticon-skycraper:before {
+    content: map-get($flaticon_broadband-map, "skycraper");
+}
+.flaticon-router:before {
+    content: map-get($flaticon_broadband-map, "router");
+}
+.flaticon-shield:before {
+    content: map-get($flaticon_broadband-map, "shield");
+}
+.flaticon-smartwatch:before {
+    content: map-get($flaticon_broadband-map, "smartwatch");
+}
+.flaticon-headphone:before {
+    content: map-get($flaticon_broadband-map, "headphone");
+}
+.flaticon-thermometer:before {
+    content: map-get($flaticon_broadband-map, "thermometer");
+}
+.flaticon-fire:before {
+    content: map-get($flaticon_broadband-map, "fire");
+}
+.flaticon-payment:before {
+    content: map-get($flaticon_broadband-map, "payment");
+}
+.flaticon-virtual-reality:before {
+    content: map-get($flaticon_broadband-map, "virtual-reality");
+}
+.flaticon-game:before {
+    content: map-get($flaticon_broadband-map, "game");
+}
+.flaticon-drone:before {
+    content: map-get($flaticon_broadband-map, "drone");
+}
+.flaticon-cloud:before {
+    content: map-get($flaticon_broadband-map, "cloud");
+}
+.flaticon-padlock:before {
+    content: map-get($flaticon_broadband-map, "padlock");
+}
+.flaticon-mouse:before {
+    content: map-get($flaticon_broadband-map, "mouse");
+}
+.flaticon-hand:before {
+    content: map-get($flaticon_broadband-map, "hand");
+}
+.flaticon-coin:before {
+    content: map-get($flaticon_broadband-map, "coin");
+}
+.flaticon-hand-1:before {
+    content: map-get($flaticon_broadband-map, "hand-1");
+}
+.flaticon-key:before {
+    content: map-get($flaticon_broadband-map, "key");
+}
+.flaticon-keyboard:before {
+    content: map-get($flaticon_broadband-map, "keyboard");
+}
+.flaticon-lamp:before {
+    content: map-get($flaticon_broadband-map, "lamp");
+}
+.flaticon-laptop:before {
+    content: map-get($flaticon_broadband-map, "laptop");
+}
+.flaticon-magnifying-glass:before {
+    content: map-get($flaticon_broadband-map, "magnifying-glass");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon_broadband-map, "pin");
+}
+.flaticon-car:before {
+    content: map-get($flaticon_broadband-map, "car");
+}
+.flaticon-world:before {
+    content: map-get($flaticon_broadband-map, "world");
+}
+.flaticon-smarthome:before {
+    content: map-get($flaticon_broadband-map, "smarthome");
+}
+.flaticon-shopping:before {
+    content: map-get($flaticon_broadband-map, "shopping");
+}
+.flaticon-robot-arm:before {
+    content: map-get($flaticon_broadband-map, "robot-arm");
+}
+.flaticon-remote:before {
+    content: map-get($flaticon_broadband-map, "remote");
+}
+.flaticon-planet:before {
+    content: map-get($flaticon_broadband-map, "planet");
+}
+.flaticon-chat:before {
+    content: map-get($flaticon_broadband-map, "chat");
+}
+.flaticon-award-1:before {
+    content: map-get($flaticon_broadband-map, "award-1");
+}
+.flaticon-microphone:before {
+    content: map-get($flaticon_broadband-map, "microphone");
+}
+.flaticon-music-notes:before {
+    content: map-get($flaticon_broadband-map, "music-notes");
+}
+.flaticon-projector:before {
+    content: map-get($flaticon_broadband-map, "projector");
+}
+.flaticon-spotlight:before {
+    content: map-get($flaticon_broadband-map, "spotlight");
+}
+.flaticon-spotlight-1:before {
+    content: map-get($flaticon_broadband-map, "spotlight-1");
+}
+.flaticon-video-camera:before {
+    content: map-get($flaticon_broadband-map, "video-camera");
+}
+.flaticon-actor:before {
+    content: map-get($flaticon_broadband-map, "actor");
+}
+.flaticon-microphone-1:before {
+    content: map-get($flaticon_broadband-map, "microphone-1");
+}
+.flaticon-film-roll:before {
+    content: map-get($flaticon_broadband-map, "film-roll");
+}
+.flaticon-3d-glasses:before {
+    content: map-get($flaticon_broadband-map, "3d-glasses");
+}
+.flaticon-director-chair:before {
+    content: map-get($flaticon_broadband-map, "director-chair");
+}
+.flaticon-countdown:before {
+    content: map-get($flaticon_broadband-map, "countdown");
+}
+.flaticon-comedy:before {
+    content: map-get($flaticon_broadband-map, "comedy");
+}
+.flaticon-camera-drone:before {
+    content: map-get($flaticon_broadband-map, "camera-drone");
+}
+.flaticon-ticket-office:before {
+    content: map-get($flaticon_broadband-map, "ticket-office");
+}
+.flaticon-rec:before {
+    content: map-get($flaticon_broadband-map, "rec");
+}
+.flaticon-microphone-2:before {
+    content: map-get($flaticon_broadband-map, "microphone-2");
+}
+.flaticon-countdown-1:before {
+    content: map-get($flaticon_broadband-map, "countdown-1");
+}
+.flaticon-stage:before {
+    content: map-get($flaticon_broadband-map, "stage");
+}
+.flaticon-clapperboard:before {
+    content: map-get($flaticon_broadband-map, "clapperboard");
+}
+.flaticon-video-player:before {
+    content: map-get($flaticon_broadband-map, "video-player");
+}
+.flaticon-red-carpet:before {
+    content: map-get($flaticon_broadband-map, "red-carpet");
+}
+.flaticon-dress:before {
+    content: map-get($flaticon_broadband-map, "dress");
+}
+.flaticon-soft-drink:before {
+    content: map-get($flaticon_broadband-map, "soft-drink");
+}
+.flaticon-make-up:before {
+    content: map-get($flaticon_broadband-map, "make-up");
+}
+.flaticon-film-budget:before {
+    content: map-get($flaticon_broadband-map, "film-budget");
+}
+.flaticon-cinema:before {
+    content: map-get($flaticon_broadband-map, "cinema");
+}
+.flaticon-copyright:before {
+    content: map-get($flaticon_broadband-map, "copyright");
+}
+.flaticon-film-reel:before {
+    content: map-get($flaticon_broadband-map, "film-reel");
+}
+.flaticon-romantic-movie:before {
+    content: map-get($flaticon_broadband-map, "romantic-movie");
+}
+.flaticon-hd-screen:before {
+    content: map-get($flaticon_broadband-map, "hd-screen");
+}
+.flaticon-popcorn:before {
+    content: map-get($flaticon_broadband-map, "popcorn");
+}
+.flaticon-edit-video:before {
+    content: map-get($flaticon_broadband-map, "edit-video");
+}
+.flaticon-release:before {
+    content: map-get($flaticon_broadband-map, "release");
+}
+.flaticon-spotlight-2:before {
+    content: map-get($flaticon_broadband-map, "spotlight-2");
+}
+.flaticon-dialogue:before {
+    content: map-get($flaticon_broadband-map, "dialogue");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon_broadband-map, "rating");
+}
+.flaticon-3d-film:before {
+    content: map-get($flaticon_broadband-map, "3d-film");
+}
