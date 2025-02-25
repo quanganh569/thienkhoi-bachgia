@@ -7,6 +7,7 @@ type SheetForm = {
   cccd: number;
   phone: string;
   note: string;
+  dateCreated: string;
 };
 
 export default async function handler(
@@ -42,7 +43,16 @@ export default async function handler(
       range: 'A1:D1',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[body.name, body.cccd, body.year, body.phone, body.note]],
+        values: [
+          [
+            body.name,
+            body.cccd,
+            body.year,
+            body.phone,
+            body.note,
+            body.dateCreated,
+          ],
+        ],
       },
     });
 

@@ -15,7 +15,10 @@ export const BannerHomePage = () => {
           </div> */}
             <h1 className="title ">
               THIÊN KHÔI GROUP <br />
-              Thu nhập ít nhất <b className="text-white">36tr/vụ</b> giao dịch
+              Thu nhập ít nhất <br /> <b className="text-white">
+                36.5tr/vụ
+              </b>{' '}
+              giao dịch
             </h1>
             {/*  */}
             <div className="btn-box">

@@ -193,7 +193,7 @@ const ContentAboutUs = () => {
                   chuyên nghiệp, đa dạng độ tuổi, tiếp thu tư duy kinh doanh
                   thời đại mới, đặt tự tôn nghề nghiệp lên cao nhất <br />
                   <small>thu nhập ít nhất </small>
-                  <strong className="amount">36tr</strong> /{' '}
+                  <strong className="amount">36.5tr</strong> /{' '}
                   <small>tháng</small>
                 </div>
                 <div className="btn-box animate-2">

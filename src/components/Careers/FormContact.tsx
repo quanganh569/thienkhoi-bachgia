@@ -10,6 +10,7 @@ const FormContact = () => {
     cccd: '',
     phone: '',
     note: '',
+    dateCreated: '',
   });
 
   const [message, setMessage] = useState('');
@@ -53,14 +54,24 @@ const FormContact = () => {
 
     setMessage('Đang gửi...');
     setIsDisabled(true);
-
+    const submissionData = {
+      ...formData,
+      dateCreated: new Date().toISOString(),
+    };
     try {
-      const response = await axios.post('/api/submit', formData, {
+      const response = await axios.post('/api/submit', submissionData, {
         headers: { 'Content-Type': 'application/json' },
       });
 
       setMessage(response.data.message);
-      setFormData({ name: '', year: '', cccd: '', phone: '', note: '' });
+      setFormData({
+        name: '',
+        year: '',
+        cccd: '',
+        phone: '',
+        note: '',
+        dateCreated: '',
+      });
       setErrors({});
       toast.success('🎉 Gửi đơn thành công!', {
         position: 'top-right',
