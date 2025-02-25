@@ -49,9 +49,12 @@ const PrivacyContent = () => {
             </h4>
           </div>
           <div className="row">
-            {listQuyenloi.map((item: any) => {
+            {listQuyenloi.map((item: any, index: any) => {
               return (
-                <div className="feature-block col-lg-4 col-md-6 col-sm-12  ">
+                <div
+                  className="feature-block col-lg-4 col-md-6 col-sm-12  "
+                  key={index}
+                >
                   <div className="inner-box">
                     <div className="icon-box">
                       <i className="icon flaticon-shield" />
@@ -73,7 +76,7 @@ const PrivacyContent = () => {
             <h2 className="text-white">Đào tạo Thiên Khôi</h2>
           </div>
           <div className="row">
-            {process.map((service, index) => (
+            {process.map((service: any, index: any) => (
               <div
                 className="feature-block col-lg-3 col-md-6 col-sm-12"
                 key={index}

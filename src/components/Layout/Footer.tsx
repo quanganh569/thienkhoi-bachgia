@@ -147,8 +147,8 @@ const Footer = () => {
                 <h6 className="widget-title">Thiên Khôi</h6>
                 <div className="widget-content">
                   <ul className="user-links">
-                    {userLinks.map((link: any) => (
-                      <li key={link.href}>
+                    {userLinks.map((link: any, index: any) => (
+                      <li key={index}>
                         <Link href={link.href}>{link.label}</Link>
                       </li>
                     ))}
@@ -162,8 +162,8 @@ const Footer = () => {
                 <h6 className="widget-title">Trụ sở Thành Phố Hà Nội</h6>
                 <div className="widget-content">
                   <ul className="user-links">
-                    {dichvu.map((link: any) => (
-                      <li>
+                    {dichvu.map((link: any, index: any) => (
+                      <li key={index}>
                         <Link href={'/tuyen-dung'}>{link.label}</Link>
                       </li>
                     ))}
